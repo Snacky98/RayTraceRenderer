@@ -8,7 +8,8 @@ void cannon_fun() {
 
 	while (projectile[0].y > 0) {
 		tuple3d *newproj = tick(projectile, environment);
-		//projectile = tick(projectile, environment);
+		projectile[0] = newproj[0];
+		projectile[1] = newproj[1];
 	}
 }
 
