@@ -8,14 +8,19 @@
 using namespace std;
 int main(int argc, char *argv[])
 { 
-	if (argc != 1) {
+	for (int i = 0; i < argc; i++) {
+		cout << argv[i] << "\n";
+	}
+	
+	if (argc <= 1) {
 		cout << "RayTraceRenderer [modenum]\n"
 			<< "1: test tuples mode\n"
 			<< "2: fun cannon";
 		exit(0);
 	}
 
-	switch (atoi(argv[0]))
+	int argnum = atoi(argv[1]);
+	switch (argnum)
 	{
 	case 0:
 		test_tuples();

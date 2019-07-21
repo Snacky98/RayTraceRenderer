@@ -7,6 +7,7 @@ void cannon_fun() {
 	tuple3d environment[] = { vector(0, -0.1, 0), vector(-0.01, 0, 0) };
 
 	while (projectile[0].y > 0) {
+		std::cout << "position: " << projectile[0].tostring() << "\nvelocity: " << projectile[1].tostring() << "\n\n";
 		tuple3d *newproj = tick(projectile, environment);
 		projectile[0] = newproj[0];
 		projectile[1] = newproj[1];
