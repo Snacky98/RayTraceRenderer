@@ -15,5 +15,6 @@ constexpr float epsilon = 0.00001;
 #include "tuple_features.h"
 #include "tuple_test.h"
 #include "projectile.h"
+#include "color.h"
 
 #endif //PCH_H

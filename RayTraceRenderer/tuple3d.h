@@ -1,11 +1,12 @@
 using namespace std;
 class tuple3d
 {
-public:
+protected:
 	//fields
 	float x, y, z; //variables for the vector's x, y, z components
 	float w; //1.0 when this tuple is a point, 0.0 when this tuple is a vector
 
+public:
 	//constructors
 	tuple3d() : tuple3d(0, 0, 0, 0) {};
 	tuple3d(float,float,float,float);
