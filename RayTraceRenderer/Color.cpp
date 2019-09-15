@@ -14,3 +14,19 @@ void color::setRed(float val) {
 float color::getRed() {
 	return this->x;
 }
+
+void color::setGreen(float val) {
+	this->y = val;
+}
+
+float color::getGreen() {
+	return this->y;
+}
+
+void color::setBlue(float val) {
+	this->z = val;
+}
+
+float color::getBlue() {
+	return this->z;
+}

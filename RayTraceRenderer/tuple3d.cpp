@@ -35,6 +35,7 @@ tuple3d tuple3d::operator+(const tuple3d &other) {
 	return tuple3d(this->x + other.x, this->y + other.y, this->z + other.z, this->w + other.w);
 }
 
+// subtracts this tuple from the other tuple and returns a new tuple as the result
 tuple3d tuple3d::operator-(const tuple3d &other) {
 	return tuple3d(this->x - other.x, this->y - other.y, this->z - other.z, this->w - other.w);
 }
@@ -69,4 +70,17 @@ tuple3d tuple3d::cross(const tuple3d &other) {
 	return tuple3d(this->y * other.z - this->z * other.y,
 		this->z * other.x - this->x * other.z,
 		this->x * other.y - this->y * other.x, 0.0);
+}
+
+// getters for the various fields
+float tuple3d::getX() {
+	return this->x;
+}
+
+float tuple3d::getY() {
+	return this->y;
+}
+
+float tuple3d::getZ() {
+	return this->z;
 }

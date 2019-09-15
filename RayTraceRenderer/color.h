@@ -1,12 +1,13 @@
 #pragma once
-#include "tuple3d.h"
+#include "pch.h"
+
 class color : public tuple3d
 {
 public:
 	//constructors
 	color() : color(0, 0, 0) {};
 	color(float, float, float);
-	~color();
+	//~color();
 
 	//getters and setters
 	void setRed(float);
