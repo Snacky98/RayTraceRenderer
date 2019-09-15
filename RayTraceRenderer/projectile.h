@@ -1,4 +1,4 @@
 #pragma once
 
 void cannon_fun();
-tuple3d* tick(tuple3d[], tuple3d[]);
+Tuple3d* tick(Tuple3d[], Tuple3d[]);

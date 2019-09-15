@@ -2,7 +2,7 @@
 #include "pch.h"
 
 using namespace std;
-class tuple3d
+class Tuple3d
 {
 protected:
 	//fields
@@ -11,25 +11,25 @@ protected:
 
 public:
 	//constructors
-	tuple3d() : tuple3d(0, 0, 0, 0) {};
-	tuple3d(float,float,float,float);
-	~tuple3d ();
+	Tuple3d() : Tuple3d(0, 0, 0, 0) {};
+	Tuple3d(float,float,float,float);
+	~Tuple3d ();
 
 	//methods
 	string tostring();
-	bool operator==(const tuple3d&);
-	bool operator!=(const tuple3d&);
-	tuple3d operator+(const tuple3d&);
-	tuple3d operator-(const tuple3d&);
-	tuple3d operator-();
-	tuple3d operator*(float);
-	//tuple3d operator*(const tuple3d&);
-	tuple3d operator/(float);
+	bool operator==(const Tuple3d&);
+	bool operator!=(const Tuple3d&);
+	Tuple3d operator+(const Tuple3d&);
+	Tuple3d operator-(const Tuple3d&);
+	Tuple3d operator-();
+	Tuple3d operator*(float);
+	//Tuple3d operator*(const Tuple3d&);
+	Tuple3d operator/(float);
 
 	float magnitude(); //finds the magnitude of this tuple
-	tuple3d normalize(); //returns the normalized version of this tuple
-	float dot(const tuple3d&); //returns the dot product between this and the other tuple
-	tuple3d cross(const tuple3d&); // returns a tuple of the cross product of this tuple and the other
+	Tuple3d normalize(); //returns the normalized version of this tuple
+	float dot(const Tuple3d&); //returns the dot product between this and the other tuple
+	Tuple3d cross(const Tuple3d&); // returns a tuple of the cross product of this tuple and the other
 
 	//getters for the various fields
 	float getX();

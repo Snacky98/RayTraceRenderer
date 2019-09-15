@@ -11,10 +11,10 @@ constexpr float epsilon = 0.00001;
 #include <iostream>
 #include <string>
 #include <cmath>
-#include "tuple3d.h"
+#include "Tuple3d.h"
 #include "tuple_features.h"
 #include "tuple_test.h"
 #include "projectile.h"
-#include "color.h"
+#include "Color.h"
 
 #endif //PCH_H

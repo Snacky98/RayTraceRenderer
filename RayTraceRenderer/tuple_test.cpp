@@ -11,8 +11,8 @@ void test_tuples() {
 	error_ctr = 0;
 
 	cout << "Starting tests to assure vectors and points allocate correctly\n";
-	tuple3d pon0 = point(4, -4, 3);
-	tuple3d vec0 = vector(4, -4, 3);
+	Tuple3d pon0 = point(4, -4, 3);
+	Tuple3d vec0 = vector(4, -4, 3);
 
 	assert(pon0.w - 1.0 < epsilon);
 	assert(vec0.w - 0.0 < epsilon);
@@ -31,15 +31,15 @@ void test_tuples() {
 
 void tuple_operations() {
 	cout << "\nStarting tests to show tuple operations work \n";
-	tuple3d pon = point(3, -2, 5);
-	tuple3d vec = vector(-2, 3, 1);
-	tuple3d pon1 = point(3, 2, 1);
-	tuple3d pon2 = point(5, 6, 7);
-	tuple3d vec1 = vector(1, 2, 3);
-	tuple3d vec2 = vector(4, 0, 0);
-	tuple3d vec3 = vector(1, 2, 3);
-	tuple3d vec4 = vector(1, 2, 3);
-	tuple3d vec5 = vector(2, 3, 4);
+	Tuple3d pon = point(3, -2, 5);
+	Tuple3d vec = vector(-2, 3, 1);
+	Tuple3d pon1 = point(3, 2, 1);
+	Tuple3d pon2 = point(5, 6, 7);
+	Tuple3d vec1 = vector(1, 2, 3);
+	Tuple3d vec2 = vector(4, 0, 0);
+	Tuple3d vec3 = vector(1, 2, 3);
+	Tuple3d vec4 = vector(1, 2, 3);
+	Tuple3d vec5 = vector(2, 3, 4);
 
 	if (pon != pon) report_failure("tuples not equal when they should be");
 	if (pon == vec) report_failure("tuples equal when they should not be");

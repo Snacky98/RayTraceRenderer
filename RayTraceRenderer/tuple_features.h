@@ -1,2 +1,2 @@
-tuple3d point(float, float, float);
-tuple3d vector(float, float, float);
+Tuple3d point(float, float, float);
+Tuple3d vector(float, float, float);
