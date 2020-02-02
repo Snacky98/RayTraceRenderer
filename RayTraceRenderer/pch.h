@@ -16,5 +16,6 @@ constexpr float EPSILON = 0.00001;
 #include "projectile.h"
 #include "Color.h"
 #include "Canvas.h"
+#include "canvasppmexporter.h"
 
 #endif //PCH_H
