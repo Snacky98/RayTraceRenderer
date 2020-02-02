@@ -4,7 +4,7 @@
 class Canvas
 {
 protected:
-	Color *canvas;
+	Color *canv;
 	int height;
 	int width;
 

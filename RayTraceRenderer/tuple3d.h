@@ -12,7 +12,7 @@ protected:
 public:
 	//constructors
 	Tuple3d() : Tuple3d(0, 0, 0, 0) {};
-	Tuple3d(float,float,float,float);
+	Tuple3d(float, float, float, float);
 	~Tuple3d ();
 
 	//methods
@@ -35,6 +35,6 @@ public:
 	float getX();
 	float getY();
 	float getZ();
+	float getW();
 
 };
-

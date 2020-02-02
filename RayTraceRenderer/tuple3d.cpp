@@ -23,11 +23,11 @@ string Tuple3d::tostring() {
 }
 
 bool Tuple3d::operator==(const Tuple3d &other) {
-	return (this->x - other.x <= epsilon) && (this->y - other.y <= epsilon) && (this->z - other.z <= epsilon) && (this->w - other.w <= epsilon);
+	return (this->x - other.x <= EPSILON) && (this->y - other.y <= EPSILON) && (this->z - other.z <= EPSILON) && (this->w - other.w <= EPSILON);
 }
 
 bool Tuple3d::operator!=(const Tuple3d &other) {
-	return !((this->x - other.x <= epsilon) && (this->y - other.y <= epsilon) && (this->z - other.z <= epsilon) && (this->w - other.w <= epsilon));
+	return !((this->x - other.x <= EPSILON) && (this->y - other.y <= EPSILON) && (this->z - other.z <= EPSILON) && (this->w - other.w <= EPSILON));
 }
 
 // adds the tuple other to this tuple and returns the result as a new tuple
@@ -83,4 +83,8 @@ float Tuple3d::getY() {
 
 float Tuple3d::getZ() {
 	return this->z;
+}
+
+float Tuple3d::getW() {
+	return this->w;
 }

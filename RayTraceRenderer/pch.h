@@ -5,8 +5,7 @@
 #ifndef PCH_H
 #define PCH_H
 
-// TODO: add headers that you want to pre-compile here
-constexpr float epsilon = 0.00001;
+constexpr float EPSILON = 0.00001;
 
 #include <iostream>
 #include <string>

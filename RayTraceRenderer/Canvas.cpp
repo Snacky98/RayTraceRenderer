@@ -3,11 +3,11 @@
 Canvas::Canvas(int w, int h) {
 	this->width = w;
 	this->height = h;
-	this->canvas = new Color[w*h];
+	this->canv = new Color[w*h];
 }
 
 Canvas::~Canvas() {
-	delete canvas;
+	delete canv;
 }
 
 int Canvas::getHeight() {
@@ -19,9 +19,9 @@ int Canvas::getWidth() {
 }
 
 Color Canvas::getPixel(int row, int col) {
-	return canvas[width * row + col];
+	return canv[width * row + col];
 }
 
 void Canvas::writePixel(int row, int col, Color newPix) {
-	canvas[width * row + col] = newPix;
+	canv[width * row + col] = newPix;
 }

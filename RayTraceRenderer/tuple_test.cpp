@@ -14,8 +14,8 @@ void test_tuples() {
 	Tuple3d pon0 = point(4, -4, 3);
 	Tuple3d vec0 = vector(4, -4, 3);
 
-	assert(pon0.w - 1.0 < epsilon);
-	assert(vec0.w - 0.0 < epsilon);
+	assert(pon0.getW() - 1.0 < EPSILON);
+	assert(vec0.getW() - 0.0 < EPSILON);
 	assert(pon0 == pon0);
 	assert(!(pon0 == vec0));
 
@@ -48,7 +48,7 @@ void tuple_operations() {
 	if (-pon != point(-3, 2, -5)) report_failure("tuple negate did not work");
 	if (vec * 2.0 != vector(-4, 6, 2)) report_failure("multiplication by a scalar did not work");
 	if (vec / 2.0 != vector(-1, 1.5, .5)) report_failure("division by a scalar did not work");
-	if (vec1.magnitude() - sqrt(14) > epsilon) report_failure("magnitude not calculated correctly");
+	if (vec1.magnitude() - sqrt(14) > EPSILON) report_failure("magnitude not calculated correctly");
 	if (vec2.normalize() != vector(1, 0, 0)) report_failure("normalization doesn't work");
 	if (vec3.normalize() != vector(0.26726, 0.53452, 0.80178)) report_failure("normalization has a bug");
 	if (vec4.dot(vec5) != 20) report_failure("dot product broke");
