@@ -7,6 +7,8 @@ CanvasPPMExporter::CanvasPPMExporter(Canvas canv, string filename, string dir) {
 	this->outDir = dir;
 }
 
+CanvasPPMExporter::~CanvasPPMExporter() {;}
+
 void CanvasPPMExporter::doExport() {
 	fstream outFile;
 
