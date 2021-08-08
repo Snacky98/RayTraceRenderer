@@ -31,6 +31,7 @@ void test_tuples() {
 
 void tuple_operations() {
 	cout << "\nStarting tests to show tuple operations work \n";
+	//create our Tuple3D objects we will test on
 	Tuple3d pon = point(3, -2, 5);
 	Tuple3d vec = vector(-2, 3, 1);
 	Tuple3d pon1 = point(3, 2, 1);
