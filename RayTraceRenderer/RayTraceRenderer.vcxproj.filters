@@ -27,12 +27,6 @@
     <ClInclude Include="tuple_features.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tuple_test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="projectile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="color.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -40,6 +34,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="canvasppmexporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\tuple_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\projectile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,12 +56,6 @@
     <ClCompile Include="tuple_features.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tuple_test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="projectile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="color.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -69,6 +63,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="canvasppmxporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\tuple_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

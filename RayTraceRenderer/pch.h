@@ -12,8 +12,8 @@ constexpr float EPSILON = 0.00001;
 #include <cmath>
 #include "Tuple3d.h"
 #include "tuple_features.h"
-#include "tuple_test.h"
-#include "projectile.h"
+#include "tests\tuple_test.h"
+#include "tests\projectile.h"
 #include "Color.h"
 #include "Canvas.h"
 #include "canvasppmexporter.h"

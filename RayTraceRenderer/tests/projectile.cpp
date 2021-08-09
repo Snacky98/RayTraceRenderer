@@ -1,4 +1,4 @@
-#include "pch.h"
+#include "../pch.h"
 
 Tuple3d* tick(Tuple3d[], Tuple3d[]);
 

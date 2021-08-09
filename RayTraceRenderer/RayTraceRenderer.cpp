@@ -2,7 +2,6 @@
 //
 
 #include "pch.h"
-#include <iostream>
 #include <assert.h>
 
 using namespace std;
@@ -28,7 +27,7 @@ int main(int argc, char *argv[])
 		break;
 
 	default:
-		cout << "not a valid modenumber";
+		cout << "not a valid mode number";
 		break;
 	}
 }
