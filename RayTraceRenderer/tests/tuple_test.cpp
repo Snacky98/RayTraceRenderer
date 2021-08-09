@@ -1,4 +1,4 @@
-#include "../pch.h"
+#include "pch.h"
 #include <iostream>
 #include <assert.h>
 
@@ -54,6 +54,17 @@ void tuple_operations() {
 	if (vec3.normalize() != vector(0.26726, 0.53452, 0.80178)) report_failure("normalization has a bug");
 	if (vec4.dot(vec5) != 20) report_failure("dot product broke");
 	if (vec4.cross(vec5) != vector(-1, 2, -1)) report_failure("cross product broke");
+
+	//some color tests
+	Color c1a(0.9, 0.6, 0.75);
+	Color c1b(0.9, 0.6, 0.75);
+	Color c2(0.7, 0.1, 0.25);
+	Color multColor1(1.0, 0.2, 0.04);
+	Color multColor2(0.9, 1.0, 0.1);
+	
+	if (c1a != c1b) report_failure("Colors cannot be found equal");
+	if (c1a + c2 != Color(1.6, 0.7, 1.0)) report_failure("Color addition is off");
+	if (multColor1 * multColor2 != Color(0.9, 0.6, 0.04)) report_failure("Color multiplication doesn't work");
 }
 
 // this very specific and ugly function is to help report and count errors during tests

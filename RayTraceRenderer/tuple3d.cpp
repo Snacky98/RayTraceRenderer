@@ -48,6 +48,11 @@ Tuple3d Tuple3d::operator*(float scalar) {
 	return Tuple3d(this->x * scalar, this->y * scalar, this->z * scalar , this->w * scalar);
 }
 
+//called a Schur product. returns a new tuple with all the terms straight multiplied together
+Tuple3d Tuple3d::operator*(const Tuple3d& other) {
+	return Tuple3d(this->x * other.x, this->y * other.y, this->z * other.z, this->w * other.w);
+}
+
 Tuple3d Tuple3d::operator/(float scalar) {
 	return Tuple3d(this->x / scalar, this->y / scalar, this->z / scalar, this->w / scalar);
 }
@@ -67,9 +72,9 @@ float Tuple3d::dot(const Tuple3d &other) {
 }
 
 Tuple3d Tuple3d::cross(const Tuple3d &other) {
-	return Tuple3d(this->y * other.z - this->z * other.y,
-		this->z * other.x - this->x * other.z,
-		this->x * other.y - this->y * other.x, 0.0);
+	return Tuple3d(	this->y * other.z - this->z * other.y,
+					this->z * other.x - this->x * other.z,
+					this->x * other.y - this->y * other.x, 0.0);
 }
 
 // getters for the various fields

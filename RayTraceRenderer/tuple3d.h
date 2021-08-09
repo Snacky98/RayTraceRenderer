@@ -11,7 +11,7 @@ protected:
 
 public:
 	//constructors
-	Tuple3d() : Tuple3d(0, 0, 0, 0) {};
+	Tuple3d() : Tuple3d(0.0, 0.0, 0.0, 0.0) {};
 	Tuple3d(float, float, float, float);
 	~Tuple3d ();
 
@@ -23,7 +23,7 @@ public:
 	Tuple3d operator-(const Tuple3d&);
 	Tuple3d operator-();
 	Tuple3d operator*(float);
-	//Tuple3d operator*(const Tuple3d&);
+	Tuple3d operator*(const Tuple3d&);
 	Tuple3d operator/(float);
 
 	float magnitude(); //finds the magnitude of this tuple
@@ -36,5 +36,4 @@ public:
 	float getY();
 	float getZ();
 	float getW();
-
 };
