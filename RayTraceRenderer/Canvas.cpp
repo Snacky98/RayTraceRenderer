@@ -1,4 +1,5 @@
 #include "pch.h"
+#include <fstream>
 
 Canvas::Canvas(int w, int h) {
 	this->width = w;
@@ -24,4 +25,13 @@ Color Canvas::getPixel(int row, int col) {
 
 void Canvas::writePixel(int row, int col, Color newPix) {
 	canv[width * row + col] = newPix;
+}
+
+bool Canvas::exportAsPPM(string filename) {
+	fstream outFile;
+
+	outFile.open(filename);
+
+	outFile.close();
+	return true;
 }

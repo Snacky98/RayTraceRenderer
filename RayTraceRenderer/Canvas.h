@@ -1,6 +1,8 @@
 #pragma once
 #include "pch.h"
 
+const string PPMHeader = "P3";
+
 class Canvas
 {
 protected:
@@ -17,5 +19,7 @@ public:
 	int getWidth();
 	void writePixel(int, int, Color);
 	Color getPixel(int, int);
+
+	bool exportAsPPM(string);
 };
 
