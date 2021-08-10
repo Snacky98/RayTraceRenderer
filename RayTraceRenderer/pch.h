@@ -7,15 +7,21 @@
 
 constexpr float EPSILON = 0.00001;
 
+//librarbies
 #include <iostream>
 #include <string>
 #include <cmath>
+
+//source
 #include "Tuple3d.h"
 #include "tuple_features.h"
-#include "tests\tuple_test.h"
-#include "tests\projectile.h"
 #include "Color.h"
 #include "Canvas.h"
-#include "canvasppmexporter.h"
+
+//test
+#include "test_common.h"
+#include "tuple_test.h"
+#include "projectile.h"
+#include "canvas_test.h"
 
 #endif //PCH_H

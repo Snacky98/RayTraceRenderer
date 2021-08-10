@@ -26,6 +26,10 @@ int main(int argc, char *argv[])
 		cannon_fun();
 		break;
 
+	case 2:
+		test_canvas();
+		break;
+
 	default:
 		cout << "not a valid mode number";
 		break;

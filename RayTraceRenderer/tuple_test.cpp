@@ -2,9 +2,6 @@
 #include <iostream>
 #include <assert.h>
 
-int error_ctr;
-
-
 
 using namespace std;
 void test_tuples() {
@@ -65,10 +62,4 @@ void tuple_operations() {
 	if (c1a != c1b) report_failure("Colors cannot be found equal");
 	if (c1a + c2 != Color(1.6, 0.7, 1.0)) report_failure("Color addition is off");
 	if (multColor1 * multColor2 != Color(0.9, 0.6, 0.04)) report_failure("Color multiplication doesn't work");
-}
-
-// this very specific and ugly function is to help report and count errors during tests
-void report_failure(string errmsg) {
-	cerr << errmsg + "\n";
-	error_ctr++;
 }

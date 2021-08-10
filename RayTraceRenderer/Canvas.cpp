@@ -1,6 +1,12 @@
 #include "pch.h"
 #include <fstream>
 
+using namespace std;
+
+constexpr int PPMFileColorDepth = 255;
+const string PPMHeader = "P3";
+
+
 Canvas::Canvas(int w, int h) {
 	this->width = w;
 	this->height = h;
@@ -27,10 +33,19 @@ void Canvas::writePixel(int row, int col, Color newPix) {
 	canv[width * row + col] = newPix;
 }
 
-bool Canvas::exportAsPPM(string filename) {
-	fstream outFile;
+int Canvas::getPixelCount() {
+	return this->width * this->height;
+}
 
-	outFile.open(filename);
+bool Canvas::exportAsPPM(string filename) {
+	ofstream outFile(filename);
+
+	if (outFile.fail())
+		return false;
+
+	outFile << PPMHeader << endl; //write the header
+	outFile << getWidth() << " " << getHeight() << endl;
+	outFile << PPMFileColorDepth << endl;
 
 	outFile.close();
 	return true;

@@ -33,10 +33,16 @@
     <ClInclude Include="Canvas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tests\tuple_test.h">
+    <ClInclude Include="tuple_test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tests\projectile.h">
+    <ClInclude Include="projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="canvas_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test_common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,10 +65,16 @@
     <ClCompile Include="Canvas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tests\tuple_test.cpp">
+    <ClCompile Include="tuple_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tests\projectile.cpp">
+    <ClCompile Include="projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="canvas_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_common.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
