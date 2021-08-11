@@ -5,7 +5,7 @@
 #ifndef PCH_H
 #define PCH_H
 
-constexpr float EPSILON = 0.00001;
+constexpr double EPSILON = 0.00001;
 
 //librarbies
 #include <iostream>

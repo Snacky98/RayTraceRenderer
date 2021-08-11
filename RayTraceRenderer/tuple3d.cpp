@@ -5,7 +5,7 @@ using namespace std;
 
 //public methods
 
-Tuple3d::Tuple3d(float x, float y, float z, float w) {
+Tuple3d::Tuple3d(double x, double y, double z, double w) {
 	this->x = x;
 	this->y = y;
 	this->z = z;
@@ -44,7 +44,7 @@ Tuple3d Tuple3d::operator-() {
 	return Tuple3d(-this->x, -this->y, -this->z, this->w);
 }
 
-Tuple3d Tuple3d::operator*(float scalar) {
+Tuple3d Tuple3d::operator*(double scalar) {
 	return Tuple3d(this->x * scalar, this->y * scalar, this->z * scalar , this->w * scalar);
 }
 
@@ -53,21 +53,21 @@ Tuple3d Tuple3d::operator*(const Tuple3d& other) {
 	return Tuple3d(this->x * other.x, this->y * other.y, this->z * other.z, this->w * other.w);
 }
 
-Tuple3d Tuple3d::operator/(float scalar) {
+Tuple3d Tuple3d::operator/(double scalar) {
 	return Tuple3d(this->x / scalar, this->y / scalar, this->z / scalar, this->w / scalar);
 }
 
-float Tuple3d::magnitude() {
-	float radicand = pow(this->x, 2) + pow(this->y, 2) + pow(this->z, 2) + pow(this->w, 2);
+double Tuple3d::magnitude() {
+	double radicand = pow(this->x, 2) + pow(this->y, 2) + pow(this->z, 2) + pow(this->w, 2);
 	return sqrt(radicand);
 }
 
 Tuple3d Tuple3d::normalize() {
-	float mag = magnitude();
+	double mag = magnitude();
 	return Tuple3d(this->x / mag, this->y / mag, this->z / mag, this->w / mag);
 }
 
-float Tuple3d::dot(const Tuple3d &other) {
+double Tuple3d::dot(const Tuple3d &other) {
 	return (this->x * other.x) + (this->y * other.y) + (this->z * other.z) + (this->w * other.w);
 }
 
@@ -78,18 +78,18 @@ Tuple3d Tuple3d::cross(const Tuple3d &other) {
 }
 
 // getters for the various fields
-float Tuple3d::getX() {
+double Tuple3d::getX() {
 	return this->x;
 }
 
-float Tuple3d::getY() {
+double Tuple3d::getY() {
 	return this->y;
 }
 
-float Tuple3d::getZ() {
+double Tuple3d::getZ() {
 	return this->z;
 }
 
-float Tuple3d::getW() {
+double Tuple3d::getW() {
 	return this->w;
 }

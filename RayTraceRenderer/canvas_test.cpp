@@ -1,5 +1,7 @@
 #include "pch.h"
 
 void test_canvas() {
-	Canvas(5,3);
+	Color col1;
+	Canvas canv1(5,3);
+
 }

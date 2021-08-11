@@ -1,32 +1,32 @@
 #include "pch.h"
 
-Color::Color(float red, float green, float blue) {
+Color::Color(double red, double green, double blue) {
 	this->x = red;
 	this->y = green;
 	this->z = blue;
 	this->w = 0;
 }
 
-void Color::setRed(float val) {
+void Color::setRed(double val) {
 	this->x = val;
 }
 
-float Color::getRed() {
+double Color::getRed() {
 	return this->x;
 }
 
-void Color::setGreen(float val) {
+void Color::setGreen(double val) {
 	this->y = val;
 }
 
-float Color::getGreen() {
+double Color::getGreen() {
 	return this->y;
 }
 
-void Color::setBlue(float val) {
+void Color::setBlue(double val) {
 	this->z = val;
 }
 
-float Color::getBlue() {
+double Color::getBlue() {
 	return this->z;
 }

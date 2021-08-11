@@ -19,6 +19,7 @@ public:
 	Color getPixel(int, int);
 	int getPixelCount();
 
+	int PPMValue(double);
 	bool exportAsPPM(string);
 };
 

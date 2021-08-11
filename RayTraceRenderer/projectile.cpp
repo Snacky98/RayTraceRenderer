@@ -13,13 +13,13 @@ void cannon_fun() {
 		projectile[1] = newproj[1];
 	}
 
-	std:cout << "Final position: " << projectile[0].tostring() << "\nFinal velocity: " << projectile[1].tostring() << "\n\n";
+	std::cout << "Final position: " << projectile[0].tostring() << "\nFinal velocity: " << projectile[1].tostring() << "\n\n";
 }
 
 Tuple3d* tick(Tuple3d proj[], Tuple3d env[]) {
 	Tuple3d pos = proj[0] + proj[1];
 	Tuple3d vel = proj[1] + env[0] + env[1];
 
-	Tuple3d newproj[2] = { pos, vel };
+	Tuple3d *newproj = new Tuple3d[2] { pos, vel };
 	return newproj;
 }
