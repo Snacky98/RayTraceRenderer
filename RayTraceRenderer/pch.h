@@ -1,4 +1,4 @@
-/* Author: Nicholas Zieger, 7/2/2019
+/* Author: Nicholas Ziegler, 7/2/2019
  * this is for headers that will be precompiled before main is run. Be sure to include all headers for classes in
  * this file*/
 
@@ -10,6 +10,7 @@ constexpr double EPSILON = 0.00001;
 //librarbies
 #include <iostream>
 #include <string>
+#include <iterator>
 #include <cmath>
 
 //source

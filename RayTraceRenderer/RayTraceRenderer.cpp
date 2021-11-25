@@ -4,6 +4,7 @@
 #include "pch.h"
 #include <assert.h>
 
+
 using namespace std;
 using namespace Renderer;
 
@@ -38,16 +39,17 @@ int main(int argc, char *argv[])
 	if (!foundCommand) {
 		cout << "No valid command found" << endl;
 		show_usage(argv[0]);
+		exit(1);
 	}
 }
 
 void show_usage(string path) {
 	cout << "Usage: " << path << " <option(s)...>" << endl
 		<< "Optons:" << endl
-		<< "\t-h, --help: Show this message." << endl
-		<< "\t-t, --tuple: Run tuples test." << endl
-		<< "\t-n, --cannon: Fun cannon." << endl
-		<< "\t-c, --canvas: Test canvas operations." << endl << endl;
+		<< "\t-h, --help\t: Show this message." << endl
+		<< "\t-t, --tuple\t: Run tuples test." << endl
+		<< "\t-n, --cannon\t: Fun cannon." << endl
+		<< "\t-c, --canvas\t: Test canvas operations." << endl << endl;
 }
 
 bool contains_arg(string arg, int argc, char* argv[]) {

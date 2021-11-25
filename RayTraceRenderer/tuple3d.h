@@ -12,7 +12,7 @@ namespace Renderer {
 	public:
 		//constructors
 		Tuple3d() : Tuple3d(0.0, 0.0, 0.0, 0.0) {};
-		Tuple3d(double, double, double, double);
+		Tuple3d(double x, double y, double z, double w);
 		~Tuple3d();
 
 		//methods
@@ -37,7 +37,7 @@ namespace Renderer {
 		double getZ();
 		double getW();
 
-		static Tuple3d point(double, double, double);
-		static Tuple3d vector(double, double, double);
+		static Tuple3d point(double x, double y, double z);
+		static Tuple3d vector(double x, double y, double z);
 	};
 }

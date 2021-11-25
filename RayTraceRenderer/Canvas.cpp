@@ -1,5 +1,4 @@
 #include "pch.h"
-#include <fstream>
 
 namespace Renderer {
 	using namespace std;
@@ -26,12 +25,15 @@ namespace Renderer {
 		return _width;
 	}
 
-	Color Canvas::getPixel(int row, int col) {
-		return _canv[(_width * row) + col];
+	Color Canvas::getPixel(int x, int y) {
+		return _canv[(_width * y) + x];
 	}
 
-	void Canvas::writePixel(int row, int col, Color newPix) {
-		_canv[(_width * row) + col] = newPix;
+	void Canvas::writePixel(int x, int y, Color newPix) {
+		if ((x >= _width || x  < 0) || (y >= _height || y < 0))
+			return; //bounds check
+
+		_canv[(_width * y) + x] = newPix;
 	}
 
 	int Canvas::getPixelCount() {
@@ -46,53 +48,69 @@ namespace Renderer {
 			return 0;
 		}
 
-		return static_cast<int>(PPMFileColorDepth * value);
+		return static_cast<int>(round(PPMFileColorDepth * calcVal));
 	}
 
-	bool Canvas::exportAsPPM(string filename) {
-		ofstream outFile(filename);
-
-		if (outFile.fail())
-			return false;
-
-		outFile << PPMHeader << endl; //write the header
-		outFile << getWidth() << " " << getHeight() << endl;
-		outFile << PPMFileColorDepth << endl;
+	string Canvas::getPPMString() {
+		string outputString;
+		outputString = outputString + PPMHeader + "\n"; //write the header
+		outputString = outputString + to_string(getWidth()) + " " + to_string(getHeight()) + "\n";
+		outputString = outputString + to_string(PPMFileColorDepth) + "\n";
 
 		int lineLen = 0;
 		int digits;
+		int colCtr = 0;
 		for (int i = 0; i < getPixelCount(); i++) {
 			Color currCol = _canv[i];
 
-			digits = static_cast<int>(floor(log10(currCol.getRed()) + 1) + 1);
+			int red = PPMValue(currCol.getRed());
+			digits = numDigits(red) + 1; //+1 for the trailing space
 			if (lineLen + digits > LINE_LEN) {
 				lineLen = 0;
-				outFile << endl;
-			} else {
-				outFile << PPMValue(currCol.getRed()) << " ";
-				lineLen += digits;
+				outputString = outputString + "\n";
 			}
+			outputString = outputString + to_string(red) + " ";
+			lineLen += digits;
 
-			digits = static_cast<int>(floor(log10(currCol.getGreen()) + 1));
+			int green = PPMValue(currCol.getGreen());
+			digits = numDigits(green) + 1; //+1 for the trailing space
 			if (lineLen + digits > LINE_LEN) {
 				lineLen = 0;
-				outFile << endl;
-			} else {
-				outFile << PPMValue(currCol.getGreen()) << " ";
-				lineLen += digits;
+				outputString = outputString + "\n";
 			}
+			outputString = outputString + to_string(green) + " ";
+			lineLen += digits;
 
-			digits = static_cast<int>(floor(log10(currCol.getBlue()) + 1));
+			int blue = PPMValue(currCol.getBlue());
+			digits = numDigits(blue) + 1; //+1 for the trailing space
 			if (lineLen + digits > LINE_LEN) {
 				lineLen = 0;
-				outFile << endl;
-			} else {
-				outFile << PPMValue(currCol.getBlue()) << " ";
-				lineLen += digits;
+				outputString = outputString + "\n";
+			}
+			outputString = outputString + to_string(blue) + " ";
+			lineLen += digits;
+
+			// once the row has been outputted, newline
+			if (++colCtr == getWidth()) {
+				outputString = outputString + "\n";
+				lineLen = 0;
+				colCtr = 0;
 			}
 		}
+		return outputString;
+	}
 
-		outFile.close();
-		return true;
+	/* Private functions */
+
+	int Canvas::numDigits(int num) {
+		if (num == 0)
+			return 1;
+
+		int count = 0;
+		while (num != 0) {
+			num /= 10;
+			count++;
+		}
+		return count;
 	}
 }

@@ -10,17 +10,20 @@ namespace Renderer {
 
 	public:
 		Canvas() : Canvas(0, 0) {};
-		Canvas(int, int);
+		Canvas(int w, int h);
 		~Canvas();
 
 		int getHeight();
 		int getWidth();
-		void writePixel(int, int, Color);
-		Color getPixel(int, int);
+		void writePixel(int x, int y, Color newCol);
+		Color getPixel(int x, int y);
 		int getPixelCount();
 
 		int PPMValue(double);
-		bool exportAsPPM(string);
+		string getPPMString();
+
+	private:
+		int numDigits(int number);
 	};
 }
 
