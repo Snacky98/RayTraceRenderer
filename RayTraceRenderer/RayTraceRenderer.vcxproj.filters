@@ -24,13 +24,10 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tuple_features.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="color.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Canvas.h">
+    <ClInclude Include="canvas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tuple_test.h">
@@ -56,13 +53,10 @@
     <ClCompile Include="tuple3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tuple_features.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="color.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Canvas.cpp">
+    <ClCompile Include="canvas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tuple_test.cpp">

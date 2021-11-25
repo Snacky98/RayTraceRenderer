@@ -1,4 +1,9 @@
 #pragma once
 
-void test_canvas();
+namespace Renderer {
+	namespace Test {
+		void test_canvas();
+	}
+}
+
 

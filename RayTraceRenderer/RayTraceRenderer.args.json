@@ -3,16 +3,40 @@
   "Id": "645d167f-92cf-48cc-b04f-1abcb0e7313e",
   "Items": [
     {
-      "Id": "d34bbab6-c1cc-492f-8be0-ac6bac70c09b",
-      "Command": "0"
+      "Id": "796c25aa-3da3-45e6-88fd-a28176087e65",
+      "Command": "--cannon"
     },
     {
-      "Id": "a64eb07a-95fd-417f-a613-4a36137977ec",
-      "Command": "1"
+      "Id": "4f3dbfdd-b2d1-4e8d-ab79-83391a5324f0",
+      "Command": "-c"
+    },
+    {
+      "Id": "f19b81c5-e826-441d-acf0-73ec1f36de19",
+      "Command": "--cannon"
+    },
+    {
+      "Id": "f8a902cf-65e5-4042-af44-295905bcf9b0",
+      "Command": "-n"
+    },
+    {
+      "Id": "68d6cc49-38c5-4ac8-9199-8305582ddad7",
+      "Command": "--tuple"
+    },
+    {
+      "Id": "d34bbab6-c1cc-492f-8be0-ac6bac70c09b",
+      "Command": "-t"
     },
     {
       "Id": "3d6f1258-6d20-4512-854d-84233376a178",
-      "Command": "2"
+      "Command": "--help"
+    },
+    {
+      "Id": "a64eb07a-95fd-417f-a613-4a36137977ec",
+      "Command": "-h"
+    },
+    {
+      "Id": "59dec0a2-e716-43de-88ab-06ad2f08ec34",
+      "Command": "-nonsense"
     }
   ]
 }

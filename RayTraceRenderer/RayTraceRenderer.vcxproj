@@ -159,7 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Canvas.h" />
+    <ClInclude Include="canvas.h" />
     <ClInclude Include="canvas_test.h" />
     <ClInclude Include="color.h" />
     <ClInclude Include="projectile.h" />
@@ -168,10 +168,9 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="tuple3d.h" />
-    <ClInclude Include="tuple_features.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Canvas.cpp" />
+    <ClCompile Include="canvas.cpp" />
     <ClCompile Include="canvas_test.cpp" />
     <ClCompile Include="color.cpp" />
     <ClCompile Include="pch.cpp">
@@ -190,7 +189,6 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IncludeDirectory)\..</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="tuple3d.cpp" />
-    <ClCompile Include="tuple_features.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RayTraceRenderer.rc" />

@@ -1,32 +1,22 @@
 #include "pch.h"
 
-Color::Color(double red, double green, double blue) {
-	this->x = red;
-	this->y = green;
-	this->z = blue;
-	this->w = 0;
-}
+namespace Renderer {
+	Color::Color(double red, double green, double blue) :
+		Tuple3d(red, green, blue, 0.0) {}
 
-void Color::setRed(double val) {
-	this->x = val;
-}
+	Color::~Color() {}
 
-double Color::getRed() {
-	return this->x;
-}
+	/* Getters. Essentially renaming the getters in Tuple3d to make them more sensical as colors */
 
-void Color::setGreen(double val) {
-	this->y = val;
-}
+	double Color::getRed() {
+		return getX();
+	}
 
-double Color::getGreen() {
-	return this->y;
-}
+	double Color::getGreen() {
+		return getY();
+	}
 
-void Color::setBlue(double val) {
-	this->z = val;
-}
-
-double Color::getBlue() {
-	return this->z;
+	double Color::getBlue() {
+		return getZ();
+	}
 }
